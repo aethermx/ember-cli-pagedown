@@ -1,6 +1,13 @@
 # Ember-cli-pagedown
 
-This README outlines the details of collaborating on this Ember addon.
+## Addon Install
+
+    ember install:addon ember-cli-pagedown
+
+## Objects available
+
+* helper:pd-converter
+* helper:pd-s-converter
 
 ## Installation
 

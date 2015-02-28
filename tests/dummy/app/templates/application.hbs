@@ -1,3 +1,87 @@
-<h2 id="title">Welcome to Ember.js</h2>
+<h1 id="title">ember-cli-pagedown</h1>
+
+<h2>Install</h2>
+
+<pre>
+  ember install:addon ember-cli-pagedown
+</pre>
+
+<h2>Objects available</h2>
+
+<div class="list-group">
+  <a href="#pd-converter" class="list-group-item">
+    helper:pd-converter
+  </a>
+  <a href="#pd-s-converter" class="list-group-item">
+    helper:pd-s-converter
+  </a>
+</div>
+
+<h2>Examples</h2>
+
+<h3 id="pd-converter">helper:pd-converter</h3>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Inline Text</h3>
+  </div>
+  <div class="panel-body">
+    {{pd-converter "*italics* **bold**"}}
+    <pre>
+      \{{pd-converter "*italics* **bold**"}}
+    </pre>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Computed Property</h3>
+  </div>
+  <div class="panel-body">
+    {{pd-converter computedProperty}}
+    <pre>
+      computedProperty: function() {
+        return '###h3\n' + 
+               '[example link](http://example.org/)' + 
+               '\n\n> example quote';
+      }.property()
+
+      \{{pd-converter computedProperty}}
+    </pre>
+  </div>
+</div>
+
+<h3 id="pd-s-converter">helper:pd-s-converter</h3>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Inline Text</h3>
+  </div>
+  <div class="panel-body">
+    {{pd-s-converter "*italics* **bold**"}}
+    <pre>
+      \{{pd-s-converter "*italics* **bold**"}}
+    </pre>
+  </div>
+</div>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Computed Property</h3>
+  </div>
+  <div class="panel-body">
+    {{pd-s-converter computedProperty}}
+    <pre>
+      computedProperty: function() {
+        return '###h3\n' + 
+               '[example link](http://example.org/)' + 
+               '\n\n> example quote';
+      }.property()
+
+      \{{pd-s-converter computedProperty}}
+    </pre>
+  </div>
+</div>
 
 {{outlet}}
