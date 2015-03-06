@@ -27,14 +27,4 @@ app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.w
            { destDir: 'fonts' });
 app.import('bower_components/bootstrap/dist/js/bootstrap.js');
 
-
-app.import('bower_components/pagedown/Markdown.Converter.js');
-app.import('bower_components/pagedown/Markdown.Editor.js');
-app.import('bower_components/pagedown/Markdown.Sanitizer.js');
-app.import('vendor/ember-pagedown/shim.js', {
-  type: 'vendor',
-  exports: { 'pd-converter': ['default'],
-             'pd-get-sanitizing-converter': ['default'] }
-});
-
 module.exports = app.toTree();

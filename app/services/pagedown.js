@@ -1,11 +1,4 @@
 import Ember from 'ember';
-import Converter from 'pd-converter';
-import getSanitizingConverter from 'pd-get-sanitizing-converter';
+import Pagedown from 'ember-cli-pagedown/services/pagedown'
 
-export default Ember.Object.extend({
-
-  converter: new Converter(),
-
-  sanitizedConverter: getSanitizingConverter()
-
-});
+export default Pagedown;

@@ -3,17 +3,21 @@
 ## Addon Install
 
     ember install:addon ember-cli-pagedown
+    bower install --save git@github.com:ujifgc/pagedown.git#f1ae0f5626
 
 ## Objects available
 
-* helper:pd-converter
-* helper:pd-s-converter
+* view:pd-converter
+* view:pd-s-converter
+* view:pd-editor
+
+Usage examples: http://aethermx.github.io/ember-cli-pagedown
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+    git clone <this repository>
+    npm install
+    bower install
 
 ## Running
 

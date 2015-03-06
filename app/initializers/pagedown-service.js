@@ -1,8 +1,3 @@
-export function initialize(container, application) {
-  application.inject('view', 'pagedownService', 'service:pagedown');
-}
+import pagedownService from 'ember-cli-pagedown/initializers/pagedown-service';
 
-export default {
-  name: 'pagedown-service',
-  initialize: initialize
-};
+export default pagedownService;

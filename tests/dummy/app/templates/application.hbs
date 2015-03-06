@@ -4,83 +4,65 @@
 
 <pre>
   ember install:addon ember-cli-pagedown
+  bower install --save git@github.com:ujifgc/pagedown.git#f1ae0f5626e044f64b937836962a9941c60c7596
 </pre>
 
 <h2>Objects available</h2>
 
 <div class="list-group">
-  <a href="#pd-converter" class="list-group-item">
-    helper:pd-converter
+  <a href="#pd_converter" class="list-group-item">
+    view:pd-converter
   </a>
-  <a href="#pd-s-converter" class="list-group-item">
-    helper:pd-s-converter
+  <a href="#pd_s_converter" class="list-group-item">
+    view:pd-s-converter
+  </a>
+  <a href="#pd_editor" class="list-group-item">
+    view:pd-editor
   </a>
 </div>
 
 <h2>Examples</h2>
 
-<h3 id="pd-converter">helper:pd-converter</h3>
 
-<div class="panel panel-default">
+<div class="panel panel-success">
   <div class="panel-heading">
-    <h3 class="panel-title">Inline Text</h3>
+    <h3 id="pd_converter" class="panel-title">
+      view:pd-converter
+    </h3>
   </div>
   <div class="panel-body">
-    {{pd-converter "*italics* **bold**"}}
-    <pre>
-      \{{pd-converter "*italics* **bold**"}}
-    </pre>
+    {{view 'pd-converter' markdown='*italics* **bold** [link](#)'}}
+  </div>
+  <div class="panel-footer">
+    \{{view 'pd-converter' markdown='*italics* **bold** [link](#)'}}
   </div>
 </div>
 
-<div class="panel panel-default">
+<div class="panel panel-success">
   <div class="panel-heading">
-    <h3 class="panel-title">Computed Property</h3>
+    <h3 id="pd_s_converter" class="panel-title">
+      view:pd-s-converter (sanitized)
+    </h3>
   </div>
   <div class="panel-body">
-    {{pd-converter computedProperty}}
-    <pre>
-      computedProperty: function() {
-        return '###h3\n' + 
-               '[example link](http://example.org/)' + 
-               '\n\n> example quote';
-      }.property()
-
-      \{{pd-converter computedProperty}}
-    </pre>
+    {{view 'pd-s-converter' markdown='*italics* **bold** [link](#)'}}
+  </div>
+  <div class="panel-footer">
+    \{{view 'pd-s-converter' markdown='*italics* **bold** [link](#)'}}
   </div>
 </div>
 
-<h3 id="pd-s-converter">helper:pd-s-converter</h3>
-
-<div class="panel panel-default">
+<div class="panel panel-success">
   <div class="panel-heading">
-    <h3 class="panel-title">Inline Text</h3>
+    <h3 id="pd_editor" class="panel-title">
+      view:pd-editor (defaults to sanitized)
+    </h3>
   </div>
   <div class="panel-body">
-    {{pd-s-converter "*italics* **bold**"}}
-    <pre>
-      \{{pd-s-converter "*italics* **bold**"}}
-    </pre>
+    {{view 'pd-editor'}}
   </div>
-</div>
-
-
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">Computed Property</h3>
-  </div>
-  <div class="panel-body">
-    {{pd-s-converter computedProperty}}
-    <pre>
-      computedProperty: function() {
-        return '###h3\n' + 
-               '[example link](http://example.org/)' + 
-               '\n\n> example quote';
-      }.property()
-
-      \{{pd-s-converter computedProperty}}
-    </pre>
+  <div class="panel-footer">
+    \{{view 'pd-editor'}}
   </div>
 </div>
 

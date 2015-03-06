@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-pagedown",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "The default blueprint for ember-cli addons.",
   "directories": {
     "doc": "doc",
@@ -19,9 +19,10 @@
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.0.0",
-    "ember-cli": "0.2.0-beta.1",
-    "ember-cli-babel": "^4.0.0",
+    "broccoli-static-compiler": "^0.2.1",
+    "ember-cli": "ember-cli/ember-cli#0a21da147d9ac46e879e20b0cec05df673c155ab",
     "ember-cli-app-version": "0.3.1",
+    "ember-cli-babel": "^4.0.0",
     "ember-cli-content-security-policy": "0.3.0",
     "ember-cli-dependency-checker": "0.0.7",
     "ember-cli-htmlbars": "0.7.4",
@@ -41,5 +42,8 @@
   ],
   "ember-addon": {
     "configPath": "tests/dummy/config"
+  },
+  "dependencies": {
+    "ember-cli-htmlbars": "^0.7.4"
   }
 }

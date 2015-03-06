@@ -14,7 +14,23 @@ module.exports = {
     app.import('vendor/ember-pagedown/shim.js', {
       type: 'vendor',
       exports: { 'pd-converter': ['default'],
-                 'pd-get-sanitizing-converter': ['default'] }
+                 'pd-get-sanitizing-converter': ['default'],
+                 'pd-editor': ['default'],
+                 'pd-hook-collection': ['default'] }
+    });
+
+    app.import('vendor/assets/img/wmd-buttons.png', { destDir: 'assets/img' });
+  },
+
+  // TODO: WIP, https://github.com/ember-cli/ember-cli/issues/3313
+  /*
+  treeForPublic: function() {
+    return this.pickFiles('vendor/assets/img', {
+      srcDir: '/',
+      destDir: 'assets/img',
+      files: ['wmd-buttons.png']
     });
   }
+  */
+
 };
