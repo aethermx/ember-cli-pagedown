@@ -1,5 +1,9 @@
 <h1 id="title">ember-cli-pagedown</h1>
 
+<p>
+  Project repo: [aethermx/ember-cli-pagedown](https://github.com/aethermx/ember-cli-pagedown)
+</p>
+
 <h2>Install</h2>
 
 <pre>
@@ -11,14 +15,25 @@
 
 <div class="list-group">
   <a href="#pd_converter" class="list-group-item">
-    view:pd-converter
+    <strong>view:pd-converter</strong>
   </a>
   <a href="#pd_s_converter" class="list-group-item">
-    view:pd-s-converter
+    <strong>view:pd-s-converter</strong>
   </a>
-  <a href="#pd_editor" class="list-group-item">
-    view:pd-editor
-  </a>
+ 
+  <li class="list-group-item">
+    <strong>view:pd-editor</strong>
+    <div class="list-group">
+      <a href="#pd_editor_text" class="list-group-item">
+        view:pd-editor
+        <small>text</small>
+      </a>
+      <a href="#pd_editor_bind" class="list-group-item">
+        view:pd-editor
+        <small>bind</small>
+      </a>
+    </div>
+  </li>
 </div>
 
 <h2>Examples</h2>
@@ -53,7 +68,7 @@
 </div>
 
 <!-- first editor -->
-<div id="pd_editor" class="panel panel-success">
+<div id="pd_editor_text" class="panel panel-success">
   <div class="panel-heading">
     <h3 class="panel-title">
       \{{view 'pd-editor' idPostfix='-first' 
@@ -70,7 +85,7 @@
 </div>
 
 <!-- second editor -->
-<div id="pd_editor" class="panel panel-success">
+<div id="pd_editor_bind" class="panel panel-success">
   <div class="panel-heading">
     <h3 class="panel-title">
       \{{view 'pd-editor' idPostfix='-second' markdown=controllerProperty}}

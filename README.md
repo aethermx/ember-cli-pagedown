@@ -1,5 +1,7 @@
 # Ember-cli-pagedown
 
+A set of views that provide a Markdown editor and converters through PageDown.
+
 ## Addon Install
 
     ember install:addon ember-cli-pagedown

@@ -1,1 +1,10 @@
-../../addon/templates/pd-editor.hbs
+
+<div class="wmd-panel">
+  <div id="{{unbound view.wmdButtonBarId}}"></div>
+
+  {{textarea id=view.wmdInputId
+             class='wmd-input'
+             value=view.markdown}}
+</div>
+
+<div id="{{unbound view.wmdPreviewId}}" class="wmd-panel wmd-preview"></div>
