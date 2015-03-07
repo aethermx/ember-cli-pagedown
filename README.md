@@ -38,3 +38,11 @@ Usage examples: http://aethermx.github.io/ember-cli-pagedown
 * `ember build`
 
 For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+
+## Legal
+
+[Æther](http://aether.mx/)
+
+hello@aether.mx
+
+[Licensed under the MIT license](http://opensource.org/licenses/mit-license.php)
