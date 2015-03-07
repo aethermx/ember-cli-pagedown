@@ -1,0 +1,8 @@
+*.map
+assets/failed.png
+assets/passed.png
+assets/test-loader.js
+assets/test-support.css
+assets/test-support.js
+testem.js
+tests/

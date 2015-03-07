@@ -189,6 +189,12 @@ define('dummy/templates/application', ['exports'], function (exports) {
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n\n");
         dom.appendChild(el0, el1);
+        var el1 = dom.createElement("p");
+        var el2 = dom.createTextNode("\n  Project repo: [aethermx/ember-cli-pagedown](https://github.com/aethermx/ember-cli-pagedown)\n");
+        dom.appendChild(el1, el2);
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n\n");
+        dom.appendChild(el0, el1);
         var el1 = dom.createElement("h2");
         var el2 = dom.createTextNode("Install");
         dom.appendChild(el1, el2);
@@ -196,7 +202,7 @@ define('dummy/templates/application', ['exports'], function (exports) {
         var el1 = dom.createTextNode("\n\n");
         dom.appendChild(el0, el1);
         var el1 = dom.createElement("pre");
-        var el2 = dom.createTextNode("\n  ember install:addon ember-cli-pagedown\n  bower install --save git@github.com:ujifgc/pagedown.git#f1ae0f5626e044f64b937836962a9941c60c7596\n");
+        var el2 = dom.createTextNode("\n  ember install:addon ember-cli-pagedown\n  bower install --save https://github.com/ujifgc/pagedown.git#f1ae0f5626e044f64b937836962a9941c60c7596 \n");
         dom.appendChild(el1, el2);
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n\n");
@@ -214,7 +220,13 @@ define('dummy/templates/application', ['exports'], function (exports) {
         var el2 = dom.createElement("a");
         dom.setAttribute(el2,"href","#pd_converter");
         dom.setAttribute(el2,"class","list-group-item");
-        var el3 = dom.createTextNode("\n    view:pd-converter\n  ");
+        var el3 = dom.createTextNode("\n    ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createElement("strong");
+        var el4 = dom.createTextNode("view:pd-converter");
+        dom.appendChild(el3, el4);
+        dom.appendChild(el2, el3);
+        var el3 = dom.createTextNode("\n  ");
         dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n  ");
@@ -222,15 +234,61 @@ define('dummy/templates/application', ['exports'], function (exports) {
         var el2 = dom.createElement("a");
         dom.setAttribute(el2,"href","#pd_s_converter");
         dom.setAttribute(el2,"class","list-group-item");
-        var el3 = dom.createTextNode("\n    view:pd-s-converter\n  ");
+        var el3 = dom.createTextNode("\n    ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createElement("strong");
+        var el4 = dom.createTextNode("view:pd-s-converter");
+        dom.appendChild(el3, el4);
+        dom.appendChild(el2, el3);
+        var el3 = dom.createTextNode("\n  ");
         dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n  ");
+        var el2 = dom.createTextNode("\n \n  ");
         dom.appendChild(el1, el2);
-        var el2 = dom.createElement("a");
-        dom.setAttribute(el2,"href","#pd_editor");
+        var el2 = dom.createElement("li");
         dom.setAttribute(el2,"class","list-group-item");
-        var el3 = dom.createTextNode("\n    view:pd-editor\n  ");
+        var el3 = dom.createTextNode("\n    ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createElement("strong");
+        var el4 = dom.createTextNode("view:pd-editor");
+        dom.appendChild(el3, el4);
+        dom.appendChild(el2, el3);
+        var el3 = dom.createTextNode("\n    ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createElement("div");
+        dom.setAttribute(el3,"class","list-group");
+        var el4 = dom.createTextNode("\n      ");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createElement("a");
+        dom.setAttribute(el4,"href","#pd_editor_text");
+        dom.setAttribute(el4,"class","list-group-item");
+        var el5 = dom.createTextNode("\n        view:pd-editor\n        ");
+        dom.appendChild(el4, el5);
+        var el5 = dom.createElement("small");
+        var el6 = dom.createTextNode("text");
+        dom.appendChild(el5, el6);
+        dom.appendChild(el4, el5);
+        var el5 = dom.createTextNode("\n      ");
+        dom.appendChild(el4, el5);
+        dom.appendChild(el3, el4);
+        var el4 = dom.createTextNode("\n      ");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createElement("a");
+        dom.setAttribute(el4,"href","#pd_editor_bind");
+        dom.setAttribute(el4,"class","list-group-item");
+        var el5 = dom.createTextNode("\n        view:pd-editor\n        ");
+        dom.appendChild(el4, el5);
+        var el5 = dom.createElement("small");
+        var el6 = dom.createTextNode("bind");
+        dom.appendChild(el5, el6);
+        dom.appendChild(el4, el5);
+        var el5 = dom.createTextNode("\n      ");
+        dom.appendChild(el4, el5);
+        dom.appendChild(el3, el4);
+        var el4 = dom.createTextNode("\n    ");
+        dom.appendChild(el3, el4);
+        dom.appendChild(el2, el3);
+        var el3 = dom.createTextNode("\n  ");
         dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
         var el2 = dom.createTextNode("\n");
@@ -325,7 +383,7 @@ define('dummy/templates/application', ['exports'], function (exports) {
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
         var el1 = dom.createElement("div");
-        dom.setAttribute(el1,"id","pd_editor");
+        dom.setAttribute(el1,"id","pd_editor_text");
         dom.setAttribute(el1,"class","panel panel-success");
         var el2 = dom.createTextNode("\n  ");
         dom.appendChild(el1, el2);
@@ -367,7 +425,7 @@ define('dummy/templates/application', ['exports'], function (exports) {
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
         var el1 = dom.createElement("div");
-        dom.setAttribute(el1,"id","pd_editor");
+        dom.setAttribute(el1,"id","pd_editor_bind");
         dom.setAttribute(el1,"class","panel panel-success");
         var el2 = dom.createTextNode("\n  ");
         dom.appendChild(el1, el2);
@@ -434,13 +492,13 @@ define('dummy/templates/application', ['exports'], function (exports) {
         } else {
           fragment = this.build(dom);
         }
-        var element0 = dom.childAt(fragment, [22]);
-        var morph0 = dom.createMorphAt(dom.childAt(fragment, [12, 3]),0,1);
-        var morph1 = dom.createMorphAt(dom.childAt(fragment, [14, 3]),0,1);
-        var morph2 = dom.createMorphAt(dom.childAt(fragment, [18, 3]),0,1);
+        var element0 = dom.childAt(fragment, [24]);
+        var morph0 = dom.createMorphAt(dom.childAt(fragment, [14, 3]),0,1);
+        var morph1 = dom.createMorphAt(dom.childAt(fragment, [16, 3]),0,1);
+        var morph2 = dom.createMorphAt(dom.childAt(fragment, [20, 3]),0,1);
         var morph3 = dom.createMorphAt(dom.childAt(element0, [3]),0,1);
         var morph4 = dom.createMorphAt(dom.childAt(element0, [5]),2,3);
-        var morph5 = dom.createMorphAt(fragment,23,24,contextualElement);
+        var morph5 = dom.createMorphAt(fragment,25,26,contextualElement);
         inline(env, morph0, context, "view", ["pd-converter"], {"markdown": "*italics* **bold** [link](#)"});
         inline(env, morph1, context, "view", ["pd-s-converter"], {"markdown": "*italics* **bold** [link](#)"});
         inline(env, morph2, context, "view", ["pd-editor"], {"idPostfix": "-first", "markdown": "*italics* **bold** [link](http://example.org)"});
@@ -987,7 +1045,7 @@ catch(err) {
 if (runningTests) {
   require("dummy/tests/test-helper");
 } else {
-  require("dummy/app")["default"].create({"name":"ember-cli-pagedown","version":"0.0.1.96b67864"});
+  require("dummy/app")["default"].create({"name":"ember-cli-pagedown","version":"0.0.0.42c2accd"});
 }
 
 /* jshint ignore:end */
