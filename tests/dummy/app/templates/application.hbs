@@ -24,9 +24,9 @@
 <h2>Examples</h2>
 
 
-<div class="panel panel-success">
+<div id="pd_converter" class="panel panel-success">
   <div class="panel-heading">
-    <h3 id="pd_converter" class="panel-title">
+    <h3 class="panel-title">
       \{{view 'pd-converter' markdown='*italics* **bold** [link](#)'}}
     </h3>
   </div>
@@ -38,9 +38,9 @@
   </div>
 </div>
 
-<div class="panel panel-success">
+<div id="pd_s_converter" class="panel panel-success">
   <div class="panel-heading">
-    <h3 id="pd_s_converter" class="panel-title">
+    <h3 class="panel-title">
       \{{view 'pd-s-converter' markdown='*italics* **bold** [link](#)'}}
     </h3>
   </div>
@@ -52,9 +52,10 @@
   </div>
 </div>
 
-<div class="panel panel-success">
+<!-- first editor -->
+<div id="pd_editor" class="panel panel-success">
   <div class="panel-heading">
-    <h3 id="pd_editor" class="panel-title">
+    <h3 class="panel-title">
       \{{view 'pd-editor' idPostfix='-first' 
               markdown='*italics* **bold** [link](http://example.org)'}}
     </h3>
@@ -68,9 +69,10 @@
   </div>
 </div>
 
-<div class="panel panel-success">
+<!-- second editor -->
+<div id="pd_editor" class="panel panel-success">
   <div class="panel-heading">
-    <h3 id="pd_editor" class="panel-title">
+    <h3 class="panel-title">
       \{{view 'pd-editor' idPostfix='-second' markdown=controllerProperty}}
     </h3>
   </div>
