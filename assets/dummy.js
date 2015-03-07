@@ -1023,8 +1023,8 @@ define('dummy/views/pd-s-converter', ['exports', 'ember-cli-pagedown/views/pd-s-
 
 /* jshint ignore:start */
 
-define('dummy/config/environment', ['ember'], function(Ember) {
-  var prefix = 'dummy';
+define('ember-cli-pagedown/config/environment', ['ember'], function(Ember) {
+  var prefix = 'ember-cli-pagedown';
 /* jshint ignore:start */
 
 try {
@@ -1043,9 +1043,9 @@ catch(err) {
 });
 
 if (runningTests) {
-  require("dummy/tests/test-helper");
+  require("ember-cli-pagedown/tests/test-helper");
 } else {
-  require("dummy/app")["default"].create({"name":"ember-cli-pagedown","version":"0.0.0.42c2accd"});
+  require("ember-cli-pagedown/app")["default"].create({"name":"ember-cli-pagedown","version":"0.0.0.42c2accd"});
 }
 
 /* jshint ignore:end */
