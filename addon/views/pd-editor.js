@@ -6,10 +6,6 @@ export default Ember.View.extend({
 
   markdown: null,
 
-  html: null,
-
-  preview: true,
-
   idPostfix: '',
   wmdButtonBarId: null, 
   wmdInputId: null, 
@@ -38,4 +34,3 @@ export default Ember.View.extend({
   } 
 
 });
-

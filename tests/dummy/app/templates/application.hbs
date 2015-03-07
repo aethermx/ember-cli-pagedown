@@ -27,39 +27,59 @@
 <div class="panel panel-success">
   <div class="panel-heading">
     <h3 id="pd_converter" class="panel-title">
-      view:pd-converter
+      \{{view 'pd-converter' markdown='*italics* **bold** [link](#)'}}
     </h3>
   </div>
   <div class="panel-body">
     {{view 'pd-converter' markdown='*italics* **bold** [link](#)'}}
   </div>
   <div class="panel-footer">
-    \{{view 'pd-converter' markdown='*italics* **bold** [link](#)'}}
+    Converts Markdown to HTML. 
   </div>
 </div>
 
 <div class="panel panel-success">
   <div class="panel-heading">
     <h3 id="pd_s_converter" class="panel-title">
-      view:pd-s-converter (sanitized)
+      \{{view 'pd-s-converter' markdown='*italics* **bold** [link](#)'}}
     </h3>
   </div>
   <div class="panel-body">
     {{view 'pd-s-converter' markdown='*italics* **bold** [link](#)'}}
   </div>
   <div class="panel-footer">
-    \{{view 'pd-s-converter' markdown='*italics* **bold** [link](#)'}}
+    Letter s for sanitized.
   </div>
 </div>
 
 <div class="panel panel-success">
   <div class="panel-heading">
     <h3 id="pd_editor" class="panel-title">
-      view:pd-editor (defaults to sanitized)
+      \{{view 'pd-editor' idPostfix='-first' 
+              markdown='*italics* **bold** [link](http://example.org)'}}
     </h3>
   </div>
   <div class="panel-body">
-    {{partial 'example-pd-editor'}}
+    {{view 'pd-editor' idPostfix='-first' 
+           markdown='*italics* **bold** [link](http://example.org)'}}
+  </div>
+  <div class="panel-footer">
+    Defaults to sanitized html.
+  </div>
+</div>
+
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h3 id="pd_editor" class="panel-title">
+      \{{view 'pd-editor' idPostfix='-second' markdown=controllerProperty}}
+    </h3>
+  </div>
+  <div class="panel-body">
+    {{view 'pd-editor' idPostfix='-second' markdown=controllerProperty}}
+  </div>
+  <div class="panel-footer">
+    \{{controllerProperty}}<br>
+    {{controllerProperty}}
   </div>
 </div>
 

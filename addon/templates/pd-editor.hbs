@@ -1,9 +1,10 @@
 
 <div class="wmd-panel">
-  <div id="wmd-button-bar"></div>
-  <textarea class="wmd-input" id="wmd-input">
-    {{markdown}}
-  </textarea>
+  <div id="{{unbound view.wmdButtonBarId}}"></div>
+
+  {{textarea id=view.wmdInputId
+             class='wmd-input'
+             value=view.markdown}}
 </div>
 
-<div id="wmd-preview" class="wmd-panel wmd-preview"></div>
+<div id="{{unbound view.wmdPreviewId}}" class="wmd-panel wmd-preview"></div>
