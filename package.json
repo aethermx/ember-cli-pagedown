@@ -13,7 +13,7 @@
   },
   "repository": "https://github.com/aethermx/ember-cli-pagedown.git",
   "engines": {
-    "node": ">= 0.12.0"
+    "node": ">= 0.10.0"
   },
   "author": "",
   "license": "MIT",
