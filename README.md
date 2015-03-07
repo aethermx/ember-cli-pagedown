@@ -1,5 +1,7 @@
 # Ember-cli-pagedown
 
+[![Build Status](https://travis-ci.org/aethermx/ember-cli-pagedown.svg?branch=master)](https://travis-ci.org/aethermx/ember-cli-pagedown)
+
 A set of views that provide a Markdown editor and converters through PageDown.
 
 ## Addon Install
