@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-pagedown",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A set of views that provide a Markdown editor and PageDown converters.",
   "directories": {
     "doc": "doc",
