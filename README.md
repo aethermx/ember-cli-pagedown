@@ -1,6 +1,7 @@
 # Ember-cli-pagedown
 
 [![Build Status](https://travis-ci.org/aethermx/ember-cli-pagedown.svg?branch=master)](https://travis-ci.org/aethermx/ember-cli-pagedown) [![Ember Observer Score](http://emberobserver.com/badges/ember-cli-pagedown.svg)](http://emberobserver.com/addons/ember-cli-pagedown)
+[![Code Climate](https://codeclimate.com/github/aethermx/ember-cli-pagedown/badges/gpa.svg)](https://codeclimate.com/github/aethermx/ember-cli-pagedown)
 
 A set of views that provide a Markdown editor and PageDown converters.
 
