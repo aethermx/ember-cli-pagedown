@@ -4,7 +4,10 @@ import getSanitizingConverter from 'pd-get-sanitizing-converter';
 import Editor from 'pd-editor';
 import HookCollection from 'pd-hook-collection';
 
-export default Ember.Object.extend({
+// TODO: remove compatibility for Ember < 1.13.0-beta.2
+var serviceBaseObject = Ember.Service ? Ember.Service : Ember.Object;
+
+export default serviceBaseObject.extend({
 
   /* singletones */
 
