@@ -3,16 +3,14 @@ import {
   test
 } from 'ember-qunit';
 
-//TODO: WIP, https://github.com/rwjblue/ember-qunit/issues/108
-
 moduleFor('view:pd-s-converter', 'Integration view:pd-s-converter', {
 
-  needs: ['service:pagedown'],
+  integration: true,
 
   beforeEach: function() {
     this.subject({
       markdown: null,
-      pagedownService: this.container.lookup('service:pagedown')
+//      pagedownService: this.container.lookup('service:pagedown')
     });
   }
 

@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
 
-  controllerProperty: function() {
+  controllerProperty: Ember.computed(function() {
     return "This text could have been fetched from a DB.\n"+
            "------------------------------\n"+
            "Just plain **Markdown**, except that the input is sanitized:\n\n"+
@@ -14,6 +14,6 @@ export default Ember.Controller.extend({
            "2. ???\n\n"+
            "3. Profit!\n\n"+
            "\"\"\"";
-  }.property()
+  })
 
 });

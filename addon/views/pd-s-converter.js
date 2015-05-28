@@ -8,13 +8,17 @@ export default Ember.View.extend({
 
   markdown: null,
 
-  html: function() {
+  pagedownService: Ember.inject.service('pagedown'),
+
+  html: Ember.computed('markdown', function() {
     var markdown = this.get('markdown');
     if ( ! markdown ) {
       return markdown;
     }
-    return this.pagedownService.sanitizedConverter
-               .makeHtml( markdown ).htmlSafe();
-  }.property('markdown')
+    
+    var pagedownService = this.get('pagedownService');
+    var html = pagedownService.sanitizedConverter.makeHtml( markdown );
+    return Ember.String.htmlSafe( html );
+  })
 
 });

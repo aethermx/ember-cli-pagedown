@@ -2,8 +2,6 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-cli-pagedown',
-
   included: function(app) {
     this._super.included(app);
 
@@ -21,6 +19,8 @@ module.exports = {
 
     app.import('vendor/assets/img/wmd-buttons.png', { destDir: 'assets/img' });
   },
+
+  name: 'ember-cli-pagedown'
 
   // TODO: WIP, https://github.com/ember-cli/ember-cli/issues/3313
   /*

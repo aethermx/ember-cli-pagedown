@@ -11,12 +11,14 @@ export default Ember.View.extend({
   wmdInputId: null, 
   wmdPreviewId: null, 
 
-  _idPostfix: function() {
+  pagedownService: Ember.inject.service('pagedown'),
+
+  _idPostfix: Ember.on('init', function() {
     var idPostfix = this.get('idPostfix');
     this.set('wmdButtonBarId', 'wmd-button-bar' + idPostfix);
     this.set('wmdInputId', 'wmd-input' + idPostfix);
     this.set('wmdPreviewId', 'wmd-preview' + idPostfix);
-  }.on('init'),
+  }),
 
   didInsertElement : function() {
     this._super();
@@ -24,11 +26,12 @@ export default Ember.View.extend({
   },
 
   afterRenderEvent: function() {
-    var converter = this.pagedownService.sanitizedConverter,
+    var pagedownService = this.get('pagedownService');
+    var converter = pagedownService.sanitizedConverter,
         idPostfix = this.get('idPostfix'),
         options = {};
 
-    var editor = new this.pagedownService.Editor(converter, idPostfix, options);
+    var editor = new pagedownService.Editor(converter, idPostfix, options);
 
     editor.run();
   } 
