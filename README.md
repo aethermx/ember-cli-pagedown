@@ -7,7 +7,10 @@ A set of views that provide a Markdown editor and PageDown converters.
 
 ## Addon Install
 
+    ember install ember-cli-pagedown
+    # if ember-cli <= 0.2.2
     ember install:addon ember-cli-pagedown
+    
     bower install --save https://github.com/ujifgc/pagedown.git#f1ae0f5626e044f64b937836962a9941c60c7596 
 
 ## Objects available
