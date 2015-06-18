@@ -1,8 +1,6 @@
 import Ember from 'ember';
 
-export default Ember.View.extend({
-
-  templateName: 'pd-editor',
+export default Ember.Component.extend({
 
   markdown: null,
 
@@ -13,7 +11,7 @@ export default Ember.View.extend({
 
   pagedownService: Ember.inject.service('pagedown'),
 
-  _idPostfix: Ember.on('init', function() {
+  _setCssIds: Ember.on('init', function() {
     var idPostfix = this.get('idPostfix');
     this.set('wmdButtonBarId', 'wmd-button-bar' + idPostfix);
     this.set('wmdInputId', 'wmd-input' + idPostfix);

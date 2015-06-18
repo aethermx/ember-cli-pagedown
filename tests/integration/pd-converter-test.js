@@ -1,42 +1,37 @@
-import {
-  moduleFor,
-  test
-} from 'ember-qunit';
+import { moduleForComponent, test } from 'ember-qunit';
 
-moduleFor('view:pd-converter', 'Integration view:pd-converter', {
-
-  integration: true,
+moduleForComponent('pd-converter', 'Integration | Component | pd-converter', {
+  unit: false, 
+  needs: ['service:pagedown'],
 
   beforeEach: function() {
     this.subject({
-      markdown: null,
-//      pagedownService: this.container.lookup('service:pagedown')
+      markdown: null
     });
   }
-
 });
 
 test('invalid markdown', function(assert) {
-  var view = this.subject();
-  assert.equal(view.get('html'), null);
+  var component = this.subject();
+  assert.equal(component.get('html'), null);
 
-  view.set('markdown', undefined);
-  assert.equal(view.get('html'), undefined);
+  component.set('markdown', undefined);
+  assert.equal(component.get('html'), undefined);
 
-  view.set('markdown', 0);
-  assert.equal(view.get('html'), 0);
+  component.set('markdown', 0);
+  assert.equal(component.get('html'), 0);
 });
 
 test('convert markdown', function(assert) {
-  var view = this.subject();
+  var component = this.subject();
 
-  view.set('markdown', '*italics*');
-  assert.equal(view.get('html').string, '<p><em>italics</em></p>');
+  component.set('markdown', '*italics*');
+  assert.equal(component.get('html').string, '<p><em>italics</em></p>');
 
-  view.set('markdown', '**bold**');
-  assert.equal(view.get('html').string, '<p><strong>bold</strong></p>');
+  component.set('markdown', '**bold**');
+  assert.equal(component.get('html').string, '<p><strong>bold</strong></p>');
 
-  view.set('markdown', '[link](#)');
-  assert.equal(view.get('html').string, '<p><a href=\"#\">link</a></p>');
+  component.set('markdown', '[link](#)');
+  assert.equal(component.get('html').string, '<p><a href=\"#\">link</a></p>');
 });
 

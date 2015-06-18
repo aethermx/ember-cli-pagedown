@@ -9,26 +9,24 @@
   bower install --save https://github.com/ujifgc/pagedown.git#f1ae0f5626e044f64b937836962a9941c60c7596 
 </pre>
 
-<h2>Objects available</h2>
+<h2>Components provided</h2>
 
 <div class="list-group">
   <a href="#pd_converter" class="list-group-item">
-    <strong>view:pd-converter</strong>
+    <strong>pd-converter</strong>
   </a>
   <a href="#pd_s_converter" class="list-group-item">
-    <strong>view:pd-s-converter</strong>
+    <strong>pd-s-converter</strong>
   </a>
  
   <li class="list-group-item">
-    <strong>view:pd-editor</strong>
+    pd-editor
     <div class="list-group">
       <a href="#pd_editor_text" class="list-group-item">
-        view:pd-editor
-        <small>text</small>
+        <strong>pd-editor with text</strong>
       </a>
       <a href="#pd_editor_bind" class="list-group-item">
-        view:pd-editor
-        <small>bind</small>
+        <strong>pd-editor with a bind</strong>
       </a>
     </div>
   </li>
@@ -40,28 +38,44 @@
 <div id="pd_converter" class="panel panel-success">
   <div class="panel-heading">
     <h3 class="panel-title">
-      \{{view 'pd-converter' markdown='*italics* **bold** [link](#)'}}
+      pd-converter
     </h3>
   </div>
   <div class="panel-body">
-    {{view 'pd-converter' markdown='*italics* **bold** [link](#)'}}
-  </div>
-  <div class="panel-footer">
     Converts Markdown to HTML. 
+    <br>
+    <br>
+    <code>
+      \{{pd-converter markdown='*italics* **bold** [link](#)'}}
+    </code>
+    <br>
+    <br>
+    <div class="well well-sm">
+      {{pd-converter markdown='*italics* **bold** [link](#)'}}
+    </div>
   </div>
 </div>
 
 <div id="pd_s_converter" class="panel panel-success">
   <div class="panel-heading">
     <h3 class="panel-title">
-      \{{view 'pd-s-converter' markdown='*italics* **bold** [link](#)'}}
+      pd-s-converter
     </h3>
   </div>
   <div class="panel-body">
-    {{view 'pd-s-converter' markdown='*italics* **bold** [link](#)'}}
-  </div>
-  <div class="panel-footer">
-    Letter s for sanitized.
+    Converts Markdown to HTML. 
+    <br>
+    The letter <strong>s</strong> stands for sanitized.
+    <br>
+    <br>
+    <code>
+      \{{pd-s-converter markdown='*italics* **bold** [link](#)'}}
+    </code>
+    <br>
+    <br>
+    <div class="well well-sm">
+      {{pd-s-converter markdown='*italics* **bold** [link](#)'}}
+    </div>
   </div>
 </div>
 
@@ -69,16 +83,23 @@
 <div id="pd_editor_text" class="panel panel-success">
   <div class="panel-heading">
     <h3 class="panel-title">
-      \{{view 'pd-editor' idPostfix='-first' 
-              markdown='*italics* **bold** [link](http://example.org)'}}
+      pd-editor - text 
     </h3>
   </div>
   <div class="panel-body">
-    {{view 'pd-editor' idPostfix='-first' 
-           markdown='*italics* **bold** [link](http://example.org)'}}
-  </div>
-  <div class="panel-footer">
-    Defaults to sanitized html.
+    Text editor with a preview below.
+    <br>
+    <br>
+    <code>
+      \{{pd-editor idPostfix='-first' 
+                   markdown='*italics* **bold** [link](http://example.org)'}}
+    </code>
+    <br>
+    <br>
+    <div class="well well-sm">
+      {{pd-editor idPostfix='-first' 
+                  markdown='*italics* **bold** [link](http://example.org)'}}
+    </div>
   </div>
 </div>
 
@@ -86,14 +107,20 @@
 <div id="pd_editor_bind" class="panel panel-success">
   <div class="panel-heading">
     <h3 class="panel-title">
-      \{{view 'pd-editor' idPostfix='-second' markdown=controllerProperty}}
+      pd-editor - bind 
     </h3>
   </div>
   <div class="panel-body">
-    {{view 'pd-editor' idPostfix='-second' markdown=controllerProperty}}
-  </div>
-  <div class="panel-footer">
-    \{{controllerProperty}}<br>
-    {{controllerProperty}}
+    Note how we are passing a computed property to the markdown value.
+    <br>
+    <br>
+    <code>
+      \{{pd-editor idPostfix='-second' markdown=controllerProperty}}
+    </code>
+    <br>
+    <br>
+    <div class="well well-sm">
+      {{pd-editor idPostfix='-second' markdown=controllerProperty}}
+    </div>
   </div>
 </div>

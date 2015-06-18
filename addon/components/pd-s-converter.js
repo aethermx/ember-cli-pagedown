@@ -1,10 +1,8 @@
 import Ember from 'ember';
 
-export default Ember.View.extend({
+export default Ember.Component.extend({
 
   tagName: 'p',
-
-  templateName: 'pd-converter',
 
   markdown: null,
 
@@ -15,8 +13,9 @@ export default Ember.View.extend({
     if ( ! markdown ) {
       return markdown;
     }
+    
     var pagedownService = this.get('pagedownService');
-    var html = pagedownService.converter.makeHtml( markdown );
+    var html = pagedownService.sanitizedConverter.makeHtml( markdown );
     return Ember.String.htmlSafe( html );
   })
 
