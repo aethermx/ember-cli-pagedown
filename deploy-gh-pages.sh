@@ -2,13 +2,15 @@
 
 ember build --environment='production'
 
-cp -Rv dist/* ../ember-cli-pagedown-gh-pages/
-
 cd ../ember-cli-pagedown-gh-pages/
 
-git add -u .
+rm -r assets
 
-git commit -m 'update'
+cp -Rv ../ember-cli-pagedown/dist/* .
+
+git add -A .
+
+git commit -m 'automated update'
 
 git push -u origin gh-pages
 
